@@ -1,0 +1,36 @@
+{
+  "name": "growth-photo-api",
+  "version": "1.0.0",
+  "description": "An application which is dedicated to store sensitive information securely.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "Secure",
+    "Information",
+    "Sensitive"
+  ],
+  "author": "Xiong Liang",
+  "license": "Apache License 2.0",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "chalk": "^2.1.0",
+    "compression": "^1.7.0",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.4",
+    "express": "^4.15.4",
+    "generate-password": "^1.3.0",
+    "glob": "^7.1.2",
+    "gulp": "^3.9.1",
+    "jsonwebtoken": "^7.4.3",
+    "lodash": "^4.17.4",
+    "method-override": "^2.3.9",
+    "mongoose": "^4.11.8",
+    "owasp-password-strength-test": "^1.3.0",
+    "passport": "^0.4.0",
+    "passport-jwt": "^3.0.0",
+    "validator": "^8.1.0"
+  }
+}
