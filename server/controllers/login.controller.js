@@ -29,7 +29,7 @@ exports.login = function (req, res, next) {
                         lastName: user.lastName
                     }
 
-                    var token = jwt.sign(payload, config.jwtOption.secretOrKey, { expiresIn: 60  });//* 60 * 24 * 7
+                    var token = jwt.sign(payload, config.jwtOption.secretOrKey, { expiresIn: 60 * 60 * 24});// * 60 * 24 * 7
                     res.json({token: token});
                 }else{
                     console.error('Password is incorrect.');

@@ -4,7 +4,7 @@ var defaultEnvConfig = require('./default');
 
 module.exports = {
     db: {
-        uri: process.env.MONGOHQ_URL || process.env.MONGODB_URI || 'mongodb://' + (process.env.DB_1_PORT_27017_TCP_ADDR || 'localhost') + '/growth-photo-api-dev',
+        uri: process.env.MONGOHQ_URL || process.env.MONGODB_URI || 'mongodb://'+ process.env.MONGODB_USER + ':' + process.env.MONGODB_PWD + '@' + (process.env.DB_1_PORT_27017_TCP_ADDR || 'localhost') + '/growth-photo-api-dev',
         options: {},
         // Enable mongoose debug mode
         debug: process.env.MONGODB_DEBUG || false
