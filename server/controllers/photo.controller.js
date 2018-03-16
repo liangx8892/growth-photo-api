@@ -26,7 +26,7 @@ exports.getPhotos = function (req, res, next) {
 
     var PhotoSchema = mongoose.model('Photo');
 
-    PhotoSchema.find({userId: req.user.id}, function(err, docs){
+    PhotoSchema.find({userId: req.user.id}).sort({createDate: -1}).exec(function(err, docs){
         if (err) {
             return res.sendStatus(500, { error: err });
         } else {
