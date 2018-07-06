@@ -24,9 +24,11 @@ exports.savePhoto = function (req, res, next) {
 
 exports.getPhotos = function (req, res, next) {
 
+    var currentPage = parseInt(req.params.currentPage);
+    var pageSize = parseInt(req.params.pageSize);
     var PhotoSchema = mongoose.model('Photo');
 
-    PhotoSchema.find({userId: req.user.id}).sort({createDate: -1}).exec(function(err, docs){
+    PhotoSchema.find({userId: req.user.id}).skip(currentPage * pageSize).limit(pageSize).sort({createDate: -1}).exec(function(err, docs){
         if (err) {
             return res.sendStatus(500, { error: err });
         } else {
