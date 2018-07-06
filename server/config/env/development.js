@@ -21,7 +21,7 @@ module.exports = {
         // Can specify one of 'combined', 'common', 'dev', 'short', 'tiny'
         format: 'dev',
         fileLogger: {
-            directoryPath: __dirname,
+            directoryPath: process.cwd(),
             fileName: 'app.log',
             maxsize: 10485760,
             maxFiles: 2,
