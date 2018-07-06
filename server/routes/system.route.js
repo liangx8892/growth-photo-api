@@ -11,6 +11,6 @@ module.exports = function (app) {
     app.route('/api/settings').get(settingsCtl.getSettings);
     app.route('/api/photo').put(photoCtl.savePhoto);
     app.route('/api/photo').post(photoCtl.updatePhoto);
-    app.route('/api/photo/:currentPage/:pageSize').get(photoCtl.getPhotos);
+    app.route('/api/photo/:currentPage/:pageSize/:changedSize').get(photoCtl.getPhotos);
     app.route('/api/photo/:photoId').delete(photoCtl.deletePhoto);
 }
